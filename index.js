@@ -36,8 +36,9 @@ function hider(){
     startButton.innerHTML = "Start";
     startButton.onclick = function(){
         document.getElementById("instruction").remove();
-        document.getElementById("main").style.visibility = "visible";
         startTest(660000);
+        document.getElementById("main").style.visibility = "visible";
+        
     };
 
     document.getElementById('instruction').appendChild(startButton);
