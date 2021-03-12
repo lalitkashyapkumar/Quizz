@@ -69,7 +69,7 @@ function onStart(data, i){
     if(i==12){
         return computeRes();
     }
-    document.getElementById("Question").innerText = data.questions[i].question;
+    document.getElementById("Question").innerText = "Que "+(i+1)+". "+data.questions[i].question;
     let mcq = data.questions[i].answers;
     mcq.forEach((element, i) => {
         if(document.getElementById("option"+i) != null){
