@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Quizz
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body onload="hider()" class="container">
+        <main>
+            <div id="timer" class="row fs-2 justify-content-end">
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8" id="instruction">
+
+                </div >
+                <div id="main" class="col-12 col-md-8" style="visibility: hidden;">
+                        <h1 class="mb-2 text-center">Question</h1>
+                        <form>
+                            <div>
+                                <h2 id="Question" class="form-label"></h2>
+                                <div id="options">
+
+                                </div>
+                                
+                                <div class="mt-5 row justify-content-between">
+                                    <div class="col-1">
+                                        <button id="prevBtn" type="button" class="btn btn-secondary" onclick="prev()">Previous</button>
+                                    </div>
+                                    <div class="col-3 col-md-2">
+                                        <button id="nextBtn" type="button" class="btn btn-primary" onclick="next()">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div id="final" class="col-12 col-md-8">
+
+                </div>
+            </div>
+        </main>
+        <!-- <script type="text/javascript" src="question.json"></script> -->
+        <script src="index.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>
+

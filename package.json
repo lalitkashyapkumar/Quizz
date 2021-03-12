@@ -1,0 +1,15 @@
+{
+  "name": "quizz",
+  "version": "1.0.0",
+  "description": "Qizz website using HTML CSS JS",
+  "main": "index.js",
+  "scripts": {
+    "start":"lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lalit Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
