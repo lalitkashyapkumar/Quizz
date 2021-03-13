@@ -103,14 +103,18 @@ function onStart(data, i){
         var divOption = document.createElement('div');
         divOption.className = "inputform-check";
         divOption.id = "option"+i;
+
         var labelVal = document.createElement('label');
         labelVal.innerHTML = element;
         labelVal.className = "fs-5";
+        labelVal.setAttribute("for", "op"+i);
+
         var input = document.createElement('input');
         input.type = "radio";
         input.name = "option";
         input.className = "mt-2"
         input.value = i;
+        input.id = "op"+i;
         document.getElementById("options").appendChild(divOption);
         document.getElementById("option"+i).appendChild(input);
         document.getElementById("option"+i).appendChild(labelVal);
