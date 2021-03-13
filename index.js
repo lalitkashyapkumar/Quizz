@@ -1,4 +1,30 @@
 function hider(){
+
+    document.body.style.backgroundImage = "url('back.png')"; 
+    document.getElementById("instruction").style.border = "thick solid #0000FF"; 
+    document.getElementById("main").style.background = "rgba(76, 175, 80, 0.3)";
+    let startButton = document.createElement('button');
+    startButton.id = "startBtn";
+    startButton.className = "btn btn-primary d-grid mx-auto";
+    startButton.setAttribute("type", "submit");
+    startButton.innerHTML = "Start";
+    startButton.onclick = function(){
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        console.log(email);
+
+        if(validateEmail(email) && password ){
+            document.getElementById("instruction").remove();
+            document.getElementById("main").style.display = "block";
+            startTest(660000);
+        }else{
+            window.alert("Please enter your credential");
+        }
+        
+    };
+
+    document.getElementById('instruction').appendChild(startButton);
+
     let h2Heading = document.createElement('h2');
     h2Heading.innerHTML = "Instructions";
     h2Heading.className = "text-center mt-5";
@@ -6,6 +32,7 @@ function hider(){
 
     let ul = document.createElement('ul');
     ul.id = "insUl";
+    ul.className = "mb-4";
     document.getElementById('instruction').appendChild(ul);
     let li1 = document.createElement("li");
     let li2 = document.createElement("li");
@@ -28,21 +55,17 @@ function hider(){
     document.getElementById('insUl').appendChild(li3);
     document.getElementById('insUl').appendChild(li4);
     document.getElementById('insUl').appendChild(li5);
-
-    let startButton = document.createElement('button');
-    startButton.id = "startBtn";
-    startButton.className = "btn btn-primary";
-    startButton.setAttribute("type", "button");
-    startButton.innerHTML = "Start";
-    startButton.onclick = function(){
-        document.getElementById("instruction").remove();
-        startTest(660000);
-        document.getElementById("main").style.visibility = "visible";
-        
-    };
-
-    document.getElementById('instruction').appendChild(startButton);
 }
+
+function validateEmail(emailID) {
+    atpos = emailID.indexOf("@");
+    dotpos = emailID.lastIndexOf(".");
+    if (atpos < 1 || ( dotpos - atpos < 2 )) {
+       return false;
+    }
+    return( true );
+  }
+
 
 var i=0;
 var res=0;
@@ -144,7 +167,7 @@ function prev(){
 function startTest(distance){
     var x = setInterval(function() {
         distance -=1000; 
-        console.log(distance); 
+        // console.log(distance); 
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s "; 

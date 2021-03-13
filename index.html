@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Quizz
+            Quiz
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +13,22 @@
     </head>
     <body onload="hider()" class="container">
         <main>
-            <div id="timer" class="row fs-2 justify-content-end">
-
-            </div>
+            <div id="timer" class="row fs-2 justify-content-end"></div>
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8" id="instruction">
+                <div class="col-12 col-md-5 mt-5" id="instruction">
+                    <img class="d-grid mx-auto mt-2" src="quiz.png" alt="logo" style="width:70px;height:70px;">
 
+                    <div class=" input-group mb-3 mt-2">
+                        <span class="input-group-text" >Email ID</span>
+                        <input type="text" id="email" class="form-control" placeholder="Enter your email address ">
+                    </div>
+    
+                    <div class=" input-group mb-3">
+                        <span class="input-group-text">Password</span>
+                        <input type="password"  id="password" class="form-control" placeholder="Enter your password">
+                    </div>
                 </div >
-                <div id="main" class="col-12 col-md-8" style="visibility: hidden;">
+                <div id="main" class="col-11 col-md-8" style="display: none;">
                         <h1 class="mb-2 text-center">Question</h1>
                         <form>
                             <div>
@@ -31,10 +39,10 @@
                                 
                                 <div class="mt-5 row justify-content-between">
                                     <div class="col-1">
-                                        <button id="prevBtn" type="button" class="btn btn-secondary" onclick="prev()">Previous</button>
+                                        <button id="prevBtn" type="button" class="btn btn-secondary mb-2" onclick="prev()">Previous</button>
                                     </div>
                                     <div class="col-3 col-md-2">
-                                        <button id="nextBtn" type="button" class="btn btn-primary" onclick="next()">Next</button>
+                                        <button id="nextBtn" type="button" class="btn btn-primary mb-2" onclick="next()">Next</button>
                                     </div>
                                 </div>
                             </div>
