@@ -3,6 +3,7 @@ function hider(){
     document.body.style.backgroundImage = "url('back.png')"; 
     document.getElementById("instruction").style.border = "thick solid #0000FF"; 
     document.getElementById("main").style.background = "rgba(76, 175, 80, 0.3)";
+    document.getElementById('main').style.borderRadius = "25px";
     let startButton = document.createElement('button');
     startButton.id = "startBtn";
     startButton.className = "btn btn-primary d-grid mx-auto";
